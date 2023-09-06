@@ -1,0 +1,1 @@
+# demo for maplife admincp
