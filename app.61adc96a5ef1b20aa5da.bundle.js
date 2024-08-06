@@ -214693,7 +214693,6 @@ var UserAdmin = (function () {
         this.authSrv = authSrv;
         this.itemsCount = 0;
         this.pageSize = 10;
-        this.syncDate = new Date();
         this.filter = { order: "id desc", skip: 0, limit: 10, where: {} };
         this.tierFilter = '';
         this.agentIdList = new __WEBPACK_IMPORTED_MODULE_1__models_user_app_model__["a" /* AgentIdList */]().agentList;
@@ -214706,6 +214705,9 @@ var UserAdmin = (function () {
         './dialogs/social-link-dialog.ts';
         './dialogs/loyalty-card-dialog.ts';
         './dialogs/usersapp-update-dialog.ts';
+        this.syncDate = new Date();
+        this.syncDate.setUTCHours(0, 0, 0, 0);
+        // this.syncDate.setDate(this.syncDate.getDate() - 1);
     }
     UserAdmin.prototype.activate = function () {
         return __awaiter(this, void 0, void 0, function () {
